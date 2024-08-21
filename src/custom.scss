@@ -1,0 +1,129 @@
+$body-bg: #f3f1ed;
+$font-family: Roboto;
+$font-family-serif: Arial;
+$border-color: black;
+$font-size-base: 1rem;
+$h6-font-size: $font-size-base*0.6;
+
+//$font-family-serif: ;
+
+//node_modules/bootstrap/scss/_variables.scss
+//https://create-react-app.dev/docs/adding-bootstrap/#:~:text=To%20enable%20scss%20in%20Create,will%20need%20to%20install%20sass%20.&text=To%20customize%20Bootstrap%2C%20create%20a,the%20imported%20file(s).
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.btn-primary {
+    background-color: #f3f1ed;
+    color: black;
+    border-color: black;
+}
+
+.crop-text{
+  -webkit-line-clamp: 6;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.h4, .h3, .h2, .h1 {
+    font-family: serif;
+    text-decoration: none;
+    color: black;
+}
+
+.img-thumbnail {
+    height: 20vh;
+    width: auto;
+    border: none;
+}
+
+.nav-link {
+    font-size: 1.2*$font-size-base;
+    font-weight: normal;
+}
+
+.bg-primary {
+    background-color: #f3f1ed !important;
+}
+
+.bg-secondary {
+    background-color: #7518de !important;
+}
+
+.input-group input[type=file] {
+  margin-left: -2px !important;
+}
+
+.input-group input[type=file]::-webkit-file-upload-button {
+  display: none;
+}
+
+.input-group input[type=file]::file-selector-button {
+  display: none;
+}
+
+.btn-secondary {
+    background-color: #7518de;
+    color: white;
+}
+
+.btn:hover, .btn:active {
+    color:#f3f1ed !important;
+    background-color:black !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+}
+
+.h4 {
+    margin-bottom: 0;
+}
+
+.form-control:focus, .form-check-input:focus {
+  border-color: #b85cff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #eb7a3d;
+}
+
+.form-check-input:checked {
+  background-color: black;
+  color:#f3f1ed;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #f3f1ed inset;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+  
+      .border#{$infix}-top {      border-top: $border-width solid $border-color !important; }
+      .border#{$infix}-end {    border-right: $border-width solid $border-color !important; }
+      .border#{$infix}-bottom {   border-bottom: $border-width solid $border-color !important; }
+      .border#{$infix}-start {     border-left: $border-width solid $border-color !important; }
+  
+      .border#{$infix}-top-0 {    border-top: 0 !important; }
+      .border#{$infix}-end-0 {  border-right: 0 !important; }
+      .border#{$infix}-bottom-0 { border-bottom: 0 !important; }
+      .border#{$infix}-start-0 {   border-left: 0 !important; }
+  
+      .border#{$infix}-x {
+        border-left: $border-width solid $border-color !important;
+        border-right: $border-width solid $border-color !important;
+      }
+  
+      .border#{$infix}-y {
+        border-top: $border-width solid $border-color !important;
+        border-bottom: $border-width solid $border-color !important;
+      }
+    }
+  }
+
+  .navbar-light {
+    background-color: #f3f1ed;
+  }
